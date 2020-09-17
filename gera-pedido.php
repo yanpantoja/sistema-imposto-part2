@@ -2,7 +2,7 @@
 
 require_once 'vendor/autoload.php';
 
-use Alura\DesignPattern\{GerarPedido, GerarPedidoHandler};
+use Alura\DesignPattern\{GerarPedido, GerarPedidoHandler, Orcamento, Pedido};
 
 $valorOrcamento = $argv[1];
 $numeroDeItens = $argv[2];
@@ -14,4 +14,3 @@ $gerarPedidoHandler->adicionarAcaoAoGerarPedido(new \Alura\DesignPattern\AcoesAo
 $gerarPedidoHandler->adicionarAcaoAoGerarPedido(new \Alura\DesignPattern\AcoesAoGerarPedido\EnviarPedidoPorEmail());
 $gerarPedidoHandler->adicionarAcaoAoGerarPedido(new \Alura\DesignPattern\AcoesAoGerarPedido\LogGerarPedido());
 $gerarPedidoHandler->execute($gerarPedido);
-

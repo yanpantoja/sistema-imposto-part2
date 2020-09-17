@@ -2,7 +2,7 @@
 
 namespace Alura\DesignPattern;
 
-class CacheOrcamentoProxy extends Orcamento
+class CacheOrcamentoProxy implements Orcavel
 {
     private float $valorCache = 0;
     private Orcamento $orcamento;
